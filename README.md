@@ -38,5 +38,35 @@ In foo(9), stack usage: 5243508 (62%)
 In foo(10), stack usage: 5767860 (68%)
 ```
 
+## Fortran
+stackcheck.c contains two functions initstackcheck_() and getstackusage_() which can be
+called from fortran. Example of this in hello.f90
+
+Build with `make` and run with `hello`
+Output:
+```
+ In foo(          20 ), stack usage:          587
+ In foo(          19 ), stack usage:         1163
+ In foo(          18 ), stack usage:         1739
+ In foo(          17 ), stack usage:         2315
+ In foo(          16 ), stack usage:         2891
+ In foo(          15 ), stack usage:         3467
+ In foo(          14 ), stack usage:         4043
+ In foo(          13 ), stack usage:         4619
+ In foo(          12 ), stack usage:         5195
+ In foo(          11 ), stack usage:         5771
+ In foo(          10 ), stack usage:         6347
+ In foo(           9 ), stack usage:         6923
+ In foo(           8 ), stack usage:         7499
+ In foo(           7 ), stack usage:         8075
+ In foo(           6 ), stack usage:         8651
+ In foo(           5 ), stack usage:         9227
+ In foo(           4 ), stack usage:         9803
+ In foo(           3 ), stack usage:        10379
+ In foo(           2 ), stack usage:        10955
+ In foo(           1 ), stack usage:        11531
+ In foo(           0 ), stack usage:        12107
+```
+
 ## License
 MIT (https://opensource.org/license/mit)
